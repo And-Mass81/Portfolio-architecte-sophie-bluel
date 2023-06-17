@@ -52,6 +52,7 @@ body {
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+	background-color: #FFFEF8;
 }
 header {
 	display: flex;
@@ -94,6 +95,13 @@ nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
 }
+nav li a{
+	text-decoration: none;
+	color: #000000;
+}
+nav li a:hover{
+	color: #B1663C;
+}
 
 li:hover {
 	color: #B1663C;
@@ -125,6 +133,31 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+.buttonsList{
+ display: flex;	
+ justify-content: center;
+ gap: 25px;
+ margin-bottom: 50px;
+}
+
+.buttonsList li {
+ color: #1D6154 ;	
+ border: 1px solid  #1D6154 ;
+ font-size: 16px;
+ border-radius: 60px;
+ text-align: center;
+ padding: 8px 20px;
+ font-weight: 700;
+ cursor: pointer;
+}
+
+.buttonsList li.active{
+	background-color:#1D6154 ;
+	color: #fff;
+	border: 1px solid  #fff ;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -137,6 +170,10 @@ li:hover {
 	width: 100%;
 
 }
+.hide{
+	display: none;
+}
+
 #contact {
 	width: 50%;
 margin: auto;
@@ -178,6 +215,79 @@ input[type="submit"]{
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
+}
+
+form button {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;	
+}
+
+
+.login{
+ display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 378px;
+margin: 0 auto 250px auto;
+
+
+}
+
+.login h2{
+	text-align: center;
+	margin-top: 162px;
+}
+
+.login label{
+	color: #3D3D3D;
+	font-weight: 600;
+	margin-top:6px;
+	margin-bottom: 6px;
+	margin-top: 30px;
+}
+
+.login input{
+height: 51px;	
+border: none;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+
+}
+
+.login button{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto 1.5em auto;
+	text-align: center;
+	height: 36px;
+	border-radius: 60px ;
+	border: none;	
+}	
+
+.linkForgot {
+	margin-top: -15px;
+	text-align: center;
+}
+
+
+.linkForgot span a {
+	color: #3D3D3D;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+footer {
+	background-color: #fff;
+	height: 60px;
+	
 }
 
 footer nav ul {
