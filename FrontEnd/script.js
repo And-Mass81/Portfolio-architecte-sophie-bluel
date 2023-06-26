@@ -83,7 +83,38 @@ fetch("http://localhost:5678/api/works")
     console.log("something is not working")
   })
 
+// -------------------------------Modal----------------------------------------
+/* const openEdit = function (e){
+  e.preventDefault()
+  const target = document.querySelector(e.target.getAttribute('href'))
+  console.log('goin ok')
+  target.classList.add('.hiden')
+  target.setAttribute('arial-hidden')
+  target.setAttribute('arial-modal','true')
+  
+}
 
+document.querySelectorAll('.openEditGallery').forEach(x => {
+  x.addEventListener('click',openEdit)
+}) */
+
+const openEdit = function (x){
+  document.querySelector('.galleryEdit').style.display ='block';
+}
+const closeEdit = function (x){
+  document.querySelector('.galleryEdit').style.display ='none';
+}
+const openUpload = function (x){
+  document.querySelector('.backOptions').style.display ='block';
+}
+const closeUpload = function (x){
+  document.querySelector('.backOptions').style.display ='none';
+}
+
+document.querySelector('.openEditGallery').addEventListener('click', openEdit)
+document.querySelector('.closeEdit').addEventListener('click', closeEdit)
+document.querySelector('.addPhoto').addEventListener('click', openUpload)
+document.querySelector('.closeUpload').addEventListener('click', closeUpload)
 
 
 
