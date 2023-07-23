@@ -2,58 +2,58 @@
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Sophie Bluel - Log in</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
-		rel="stylesheet">
-	<meta name="description" content="">
-	<link rel="stylesheet" href="./assets/style.css">
+<meta charset="UTF-8">
+<title>Sophie Bluel - Log in</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+rel="stylesheet">
+<meta name="description" content="">
+<link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-	<header>
-		<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
-		<nav>
-			<ul>
-				<li>projets</li>
-				<li>contact</li>
-				<li>login</li>
-				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<div class="login">
-			<h2>Login</h2>
+<header>
+<a href="index.html" class="linkLogo"><h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1></a>
+<nav>
+<ul>
+<li>projets</li>
+<li>contact</li>
+<li>login</li>
+<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+</ul>
+</nav>
+</header>
+<main>
+<div class="login">
+<h2>Login</h2>
 
-			<form class="login" id="formLog">
+<form class="login" id="formLog">
 
-				<label>E-mail</label>
-				<input name="email" type="email"  id="eMail">
+<label>E-mail</label>
+<input name="email" type="email" id="eMail">
 
-				<label>Password</label>
-				<input name="Password" type="password" id="passW" >
+<label>Password</label>
+<input name="Password" type="password" id="passW" >
+<span class="errorPass">Le mot de passe ou l'e-mail ne correspond pas, veuillez réessayer.</span>
+<button type="submit">Se connecter</button>
+</form>
 
-				<button type="submit">Se connecter</button>	
-			</form>
+<div class="linkForgot">
+<span class="psw"><a href="#">Mot de passe oublié ?</a></span>
+</div>
 
-			<div class="linkForgot">
-				<span class="psw"><a href="#">Mot de passe oublié ?</a></span>
-			</div>
-
-		</div>
-	</main>
-	<footer>
-		<nav>
-			<ul>
-				<li>Mentions Légales</li>
-			</ul>
-		</nav>
-	</footer>
-	<script src="login.js"></script>
+</div>
+</main>
+<footer>
+<nav>
+<ul>
+<li>Mentions Légales</li>
+</ul>
+</nav>
+</footer>
+<script src="login.js"></script>
 </body>
 
 </html>

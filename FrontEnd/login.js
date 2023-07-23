@@ -18,40 +18,21 @@ form.addEventListener('submit', function (x) {
 
   })
     .then(resp => {
-      if( !resp.ok){
-        //location.replace('index.html')
+      if (!resp.ok) {
         throw new Error("password or user , no match")
       }
       return resp.json();
     })
     .then(data => {
-      //location.replace('index.html')
-      console.log(data.token)
+      //console.log(data.token)
+      localStorage.setItem("passOk", data.token);
+      location.replace('index.html')
+
+
     })
-    .catch(error => console.log('error in login'));
+    .catch(error => document.querySelector(".errorPass").style.display ="block");
 })
 
 
 
 
-
-/* const formLogIn = document.getElementById('formLog')
-
-formLogIn.addEventListener('submit', function (x) {
-    x.preventDefault();
-    const preFormload = new FormData(formLogIn);
-    const formload = new URLSearchParams(preFormload )
-    console.log([...formLogIn]);
-
-    fetch('http://localhost:5678/users/login',{
-        method: "POST",
-        body: formload,
-         
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(error => console.log('error in login'));
-  
-})  */
-
-//http://localhost:5678/api/users/login 'http://httpbin.org/post' body: JSON.stringify(formLogIn)
