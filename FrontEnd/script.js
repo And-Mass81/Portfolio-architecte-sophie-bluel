@@ -20,15 +20,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
 const displayGallery = () => {
 
   fetch("http://localhost:5678/api/works")
-    // 1 we need to feed a URL to fetch and its gonna give us back a Promise (async) its gonna open two path "ok and error" then and catch
     .then(success => success.json())
-    // 2 we can get the data in a JASON form but its coming back as anothe promise.
     .then(data => {
       let galleryItem = ''
 
       for (let figure of data) {
         galleryItem +=
-          // with += i create an elemente and i add one too for each figure 
           `
           <figure  data-id=${figure.id} data-category-photo="${figure.categoryId}" class="figureContainer" >
             <img src="${figure.imageUrl}" alt="${figure.title}">
@@ -93,8 +90,7 @@ const displayGallery = () => {
 }
 
 const displayFilters = () => {
-  // filters : i need to do the fetch inside the fetch for the scope of the let data
-
+  
   fetch("http://localhost:5678/api/categories")
     .then(idCategorie => idCategorie.json())
     .then(idCategorie => {
@@ -115,7 +111,6 @@ const displayFilters = () => {
         document.querySelector(".active").classList.remove("active");
         result.target.classList.add("active");
 
-        //target interface is a reference to the object onto which the event was dispatched
 
         //filtre for figure 
         document.querySelectorAll(".figureContainer").forEach(indexFigure => {
@@ -241,10 +236,9 @@ document.getElementById("uploadPicture").addEventListener("submit", (event) => {
 
       .catch(error => console.log(error));
 
-      //document.querySelector('.backOptions').style.display = 'none';
  })
 
-//display img
+
 
 
 document.getElementById("file-input").addEventListener("change", function() {
@@ -279,76 +273,3 @@ document.getElementById("file-input").addEventListener("change", function() {
 
 
 
-// ------------------------------- Mini Gallery----------------------------------------
-
-
- /*  fetch("http://localhost:5678/api/works")
-    .then(success => success.json())
-    .then(dataMini => {
-
-      let modalGalleryPic = ''
-
-      for (let MiniFigure of dataMini) {
-        modalGalleryPic +=
-          ` 
-      <figure data-id=${MiniFigure.id} class="editPic">
-        <span data-mini-id =${MiniFigure.id} class="deleteIcon"><i class="fa-solid fa-trash-can"></i></span>
-        <img src="${MiniFigure.imageUrl}">
-        <figcaption>éditer</figcaption>
-      </figure>
-      `
-
-      }
-
-      document.querySelector('.figContainer').innerHTML = modalGalleryPic
-
-      const deleteImg = document.getElementsByClassName('deleteIcon')
-      for(let iconD of deleteImg){
-        iconD.addEventListener("click",(e)=> {
-         const numberId = iconD.dataset.miniId
-         deletePic(numberId)
-         console.log(numberId)
-        })
-
-      }
-
-
-    })
-
-
-    .catch(error => {
-      console.log(error)
-      console.log("something is not working")
-    }) */
-
-
-
- 
-
-
-
-
-
-
-
-//http://localhost:5678/api/works/3
-
-//http://httpbin.org/post
-//JSON.parse(localStorage.getItem("passOk")).token,
-
-/* 
-
-  fetch("http://localhost:5678/api/works",{
-    method:"POST",
-    body: formData,
-  })
-
-
-  let btnsDel = document.querySelectorAll('deleteIcon');
-
-for (i of btnsDel) {
-  i.addEventListener('click', function() {
-    console.log("btn ok");
-  });
-}
- */
