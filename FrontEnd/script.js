@@ -32,8 +32,7 @@ const displayGallery = () => {
             <figcaption>${figure.title}</figcaption>
           </figure>
           `
-        /* The idea of this code is to first create all the HTML and then inject it, 
-        this way we don't need to call innerHTML (it consumes a lot of resources) every time we create an element. */
+
 
       }
 
